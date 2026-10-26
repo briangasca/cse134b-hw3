@@ -3,11 +3,13 @@
     justify-content: center;
 }
 
+/* targets any picture inside main */
 main picture {
     display: flex;
     justify-content: center;
 }
 
+/* targets any h2 inside main */
 main h2 {
     display: flex;
     justify-content: center;
@@ -29,6 +31,7 @@ main h2 {
     grid-row: 1 / span 2;
 }
 
+/* targets the svg divider anywhere inside home-content */
 .home-content svg {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -45,10 +48,12 @@ main h2 {
     padding: 0;
 }
 
+/* targets list items directly inside intro-links, removing bullets */
 .intro-links > li {
     list-style-type: none;
 }
 
+/* targets the links inside the intro-links list itemss */
 .intro-links > li > a {
     display: flex;
     color: var(--text-color-alt);
@@ -63,6 +68,7 @@ main h2 {
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
+/* targets intro-links buttons on hover */
 .intro-links > li > a:hover {
     background-color: var(--hover-bg-alt);
 }
@@ -76,10 +82,12 @@ main h2 {
     padding: 0;
 }
 
+/* targets list items directly inside my-links */
 .my-links > li {
     list-style-type: none;
 }
 
+/* targets the links inside the my-links list items */
 .my-links > li > a {
     display: flex;
     align-items: center;
@@ -95,21 +103,25 @@ main h2 {
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
+/* targets my-links buttons on hover*/
 .my-links > li > a:hover {
     background-color: var(--hover-bg);
     border-color: var(--border-strong);
 }
 
+/* targets the icon images inside my-links*/
 .my-links img {
     width: 1rem;
     height: 1rem;
     display: block;
 }
 
+/* targets the contact form element */
 .message-me-form {
     display: flex;
 }
 
+/* targets the fieldset inside the contact form */
 .message-me-form fieldset {
     display: flex;
     flex-direction: column;
@@ -120,10 +132,12 @@ main h2 {
     padding: 1rem;
 }
 
+/* targets the legend inside the contact form */
 .message-me-form legend {
     padding: 0 0.5rem;
 }
 
+/* targets the paragraphs wrapping each label + field in the contact form. stacks them */
 .message-me-form p {
     display: flex;
     flex-direction: column;
@@ -131,10 +145,12 @@ main h2 {
     margin: 0;
 }
 
+/* targets the labels in the contact form */
 .message-me-form label {
     font-weight: 500;
 }
 
+/* targets the text inputs in the contact form */
 .message-me-form input {
     color: var(--text-color);
     background-color: transparent;
@@ -143,10 +159,12 @@ main h2 {
     padding: 0.5rem 0.75rem;
 }
 
+/* targets a focused contact form input */
 .message-me-form input:focus {
     outline: 2px solid var(--border-strong);
 }
 
+/* targets the message textarea in the contact form */
 .message-me-form textarea {
     color: var(--text-color);
     background-color: transparent;
@@ -158,10 +176,12 @@ main h2 {
     resize: vertical;
 }
 
+/* targets a focused contact form textarea */
 .message-me-form textarea:focus {
     outline: 2px solid var(--border-strong);
 }
 
+/* targets the Send button in the contact form */
 .message-me-form button {
     align-self: flex-end;
     font-weight: 500;
@@ -176,6 +196,7 @@ main h2 {
     transition: background-color 0.2s ease;
 }
 
+/* targets the Send button on hover*/
 .message-me-form button:hover {
     background-color: var(--hover-bg-alt);
 }
@@ -188,14 +209,17 @@ main h2 {
         gap: 2rem;
     }
 
+    /* hides the svg divider since there's no side-by-side layout anymore */
     .home-content svg {
         display: none;
     }
 
+    /* lets the profile section flow normally instead of making it two rows */
     .home-content .profile {
         grid-row: auto;
     }
 
+    /* puts every section in the single column for phone layout */
     .home-content section {
         grid-column: 1;
     }
