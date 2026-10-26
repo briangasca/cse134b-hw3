@@ -1,0 +1,77 @@
+:root {
+    /* colors */
+    --bg-color: #0d0d0d;
+    --bg-color-alt: rgb(255,255,255);
+    --text-color: white;
+    --text-color-alt: black;
+    --border-color: rgba(255, 255, 255, 0.726);
+    --border-strong: rgba(255, 255, 255, 0.8);
+    --hover-bg: rgba(255, 255, 255, 0.15);
+    --hover-bg-alt: rgba(255, 255, 255, 0.623);
+
+    /* font with fallbacks*/
+    --font-stack: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+header {
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    gap: 1rem;
+}
+
+/* targetting the Brian Gasca part on the navbar */
+header > p {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 1rem;
+    margin: 0;
+    gap: 0.5rem;
+}
+
+.navbar a[aria-current="page"] {
+    outline: 2px solid var(--border-strong);
+}
+
+/* targetting the links in the navbar */
+.navbar > li > a {
+    display: flex;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 1000px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar > li > a:hover {
+    background-color: var(--hover-bg);
+}
+
+/* shared main */
+main {
+    margin-top: 2rem;
+    padding: 1rem;
+}
